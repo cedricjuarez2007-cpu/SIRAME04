@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIRAME — Sistema de Inventario, Registro y Administración de Materiales y Equipos</title>
+<link rel="icon" href="Img/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo" aria-label="SIRAME, ir al inicio">
+      <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+    </a>
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="modulos.html" class="nav__link">Módulos</a>
+      <a href="roles.html" class="nav__link">Roles</a>
+      <a href="sistema.html" class="nav__link">El sistema</a>
+      <a href="precios.html" class="nav__link">Precios</a>
+      <a href="ayuda.html" class="nav__link">Ayuda</a>
+      <a href="contacto.html" class="nav__link">Contacto</a>
+      <a href="resenas.html" class="nav__link">Reseñas</a>
+      <a href="acceso.html" class="btn-star btn-star--nav">Solicitar acceso</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Navegación móvil">
+    <a href="modulos.html">Módulos</a>
+    <a href="roles.html">Roles</a>
+    <a href="sistema.html">El sistema</a>
+    <a href="precios.html">Precios</a>
+    <a href="ayuda.html">Ayuda</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="resenas.html">Reseñas</a>
+    <a href="acceso.html" class="nav__cta">Solicitar acceso</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="hero__eyebrow">Sistema de Inventario, Registro y Administración de Materiales y Equipos (Inframen)</p>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Sabé dónde está</span>
+          <span class="hero__title-line hero__title-line--accent">cada equipo, siempre.</span>
+        </h1>
+        <p class="hero__subtitle">SIRAME centraliza el inventario, los traslados, el mantenimiento y las incidencias de todo el equipo institucional en un solo sistema, con permisos claros para cada responsable.</p>
+
+        <div class="hero__clarify">
+          <span class="hero__clarify-icon">💡</span>
+          <p><strong>SIRAME es un software</strong> que desarrollamos e instalamos para tu institución (escuela, universidad u oficina), para que administres el inventario de tus equipos desde un panel propio.</p>
+        </div>
+
+        <!-- CTA reforzado -->
+        <div class="hero__actions">
+          <a href="acceso.html" class="btn btn--primary btn--large">Solicitar acceso gratis</a>
+          <a href="precios.html" class="btn btn--ghost">Ver precios</a>
+        </div>
+        <div class="hero__proof">
+          <div class="hero__roles-badges" aria-hidden="true">
+            <span class="role-dot role-dot--1">P</span>
+            <span class="role-dot role-dot--2">C</span>
+            <span class="role-dot role-dot--3">A</span>
+          </div>
+          <p>3 roles con permisos definidos: Profesor, Coordinador y Administración</p>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__blob" aria-hidden="true"></div>
+
+        <div class="hero__photo">
+          <img src="Img/hero-inventario.jpg" alt="Laboratorio equipado con inventario registrado en SIRAME" onerror="this.parentElement.classList.add('img-fallback')">
+        </div>
+
+        <div class="tag-card">
+          <div class="tag-card__top">
+            <span class="tag-card__label">FICHA DE EQUIPO</span>
+            <span class="tag-card__stamp">VERIFICADO</span>
+          </div>
+          <p class="tag-card__id">EQ-0142</p>
+          <p class="tag-card__name">Proyector — Laboratorio 2</p>
+          <div class="tag-card__row"><span>Estado</span><strong id="tagStatus">Disponible</strong></div>
+          <div class="tag-card__barcode" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="float-card float-card--1">
+          <span class="float-card__icon float-card__icon--green">✓</span>
+          <div><p class="float-card__title">Traslado registrado</p><p class="float-card__meta">Lab. 2 → Aula 105</p></div>
+        </div>
+        <div class="float-card float-card--2">
+          <span class="float-card__icon float-card__icon--gold">⟳</span>
+          <div><p class="float-card__title" id="floatStatusText">Actualizando estado…</p><p class="float-card__meta">Sistema SIRAME</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stats__inner">
+      <div class="stat"><p class="stat__number" data-count="8">0</p><p class="stat__label">Modelos de datos conectados</p></div>
+      <div class="stat"><p class="stat__number" data-count="3">0</p><p class="stat__label">Roles con permisos propios</p></div>
+      <div class="stat"><p class="stat__number" data-count="1">0</p><p class="stat__label">Sistema para toda la institución</p></div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA (resumen, 3 pasos) -->
+  <section class="steps">
+    <div class="section__head">
+      <p class="section__eyebrow">Cómo funciona</p>
+      <h2 class="section__title">De la ficha al reporte, en tres pasos</h2>
+      <p class="section__subtitle">El flujo completo, del registro inicial al historial de cada equipo. El detalle completo está en la página <a href="sistema.html" class="inline-link">El sistema</a>.</p>
+    </div>
+    <div class="steps__grid">
+      <article class="step-item">
+        <span class="step-item__number">01</span>
+        <h3>Se registra el equipo</h3>
+        <p>Administración da de alta el equipo con su tipo, ubicación y número de inventario.</p>
+      </article>
+      <article class="step-item">
+        <span class="step-item__number">02</span>
+        <h3>Se usa y se mueve</h3>
+        <p>Coordinadores registran traslados; profesores consultan estado y reportan incidencias.</p>
+      </article>
+      <article class="step-item">
+        <span class="step-item__number">03</span>
+        <h3>Se mantiene el historial</h3>
+        <p>Cada mantenimiento, traslado o baja queda documentado y disponible para consulta.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ROLES (teaser con fotos) -->
+  <section class="roles-teaser">
+    <div class="section__head">
+      <p class="section__eyebrow">Acceso por rol</p>
+      <h2 class="section__title">Cada quien ve lo que le corresponde</h2>
+      <p class="section__subtitle">Los permisos se definen por rol, no por persona. Conocé el detalle completo de cada uno.</p>
+    </div>
+    <div class="roles-teaser__grid">
+      <a href="roles.html" class="role-photo-card">
+        <div class="role-photo-card__img"><img src="Img/rol-profesor.jpg" alt="Profesor consultando el estado de un equipo" onerror="this.parentElement.classList.add('img-fallback')"></div>
+        <span class="role-card__tag">Profesor</span>
+        <p>Consulta equipo y reporta incidencias.</p>
+      </a>
+      <a href="roles.html" class="role-photo-card role-photo-card--highlight">
+        <div class="role-photo-card__img"><img src="Img/rol-coordinador.jpg" alt="Coordinador registrando un traslado de equipo" onerror="this.parentElement.classList.add('img-fallback')"></div>
+        <span class="role-card__tag">Coordinador</span>
+        <p>Actualiza equipo y registra traslados.</p>
+      </a>
+      <a href="roles.html" class="role-photo-card">
+        <div class="role-photo-card__img"><img src="Img/rol-administracion.jpg" alt="Administración gestionando el sistema completo" onerror="this.parentElement.classList.add('img-fallback')"></div>
+        <span class="role-card__tag">Administración</span>
+        <p>Acceso completo: usuarios, bajas y mantenimientos.</p>
+      </a>
+    </div>
+    <p class="modules__more"><a href="roles.html" class="btn btn--ghost">Ver permisos completos por rol →</a></p>
+  </section>
+
+  <!-- MÓDULOS (resumen) -->
+  <section class="modules">
+    <div class="section__head">
+      <p class="section__eyebrow">Estructura del sistema</p>
+      <h2 class="section__title">Ocho modelos, un solo registro</h2>
+      <p class="section__subtitle">Todo el ciclo de vida de un equipo queda documentado: dónde está, quién lo movió, qué mantenimiento tuvo y por qué salió de servicio.</p>
+    </div>
+    <div class="modules__grid">
+      <article class="module-card"><span class="module-card__icon">🖥</span><h3>Equipo</h3><p>Ficha por número de inventario, con estado y ubicación actual.</p></article>
+      <article class="module-card"><span class="module-card__icon">🗂</span><h3>TipoEquipo</h3><p>Categorías estandarizadas para clasificar cada equipo.</p></article>
+      <article class="module-card"><span class="module-card__icon">📍</span><h3>Ubicación</h3><p>Aulas, laboratorios y oficinas con su equipo asignado.</p></article>
+      <article class="module-card"><span class="module-card__icon">👤</span><h3>Usuario</h3><p>Acceso diferenciado por rol.</p></article>
+      <article class="module-card"><span class="module-card__icon">🔀</span><h3>Traslado</h3><p>Movimientos entre ubicaciones, con motivo y responsable.</p></article>
+      <article class="module-card"><span class="module-card__icon">🛠</span><h3>Mantenimiento</h3><p>Historial preventivo y correctivo por equipo.</p></article>
+      <article class="module-card"><span class="module-card__icon">📤</span><h3>Baja</h3><p>Proceso formal para equipo fuera de servicio.</p></article>
+      <article class="module-card"><span class="module-card__icon">⚠</span><h3>Incidencia</h3><p>Reporte y seguimiento de fallas.</p></article>
+    </div>
+    <p class="modules__more"><a href="modulos.html" class="btn btn--ghost">Ver el detalle de cada módulo →</a></p>
+  </section>
+
+  <!-- NUEVO: TESTIMONIOS (Prueba Social) -->
+  <section class="testimonials">
+    <div class="section__head">
+      <p class="section__eyebrow">Instituciones que confían en nosotros</p>
+      <h2 class="section__title">Ya usan SIRAME en El Salvador</h2>
+      <p class="section__subtitle">Escuelas, universidades y oficinas gubernamentales ya administran su inventario con SIRAME.</p>
+    </div>
+    <div class="testimonials__grid">
+      <!-- Testimonio 1 -->
+      <article class="testimonial-card">
+        <img src="Img/logo-ues.webp" alt="Logo Universidad de El Salvador" class="testimonial-card__logo" onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <p class="testimonial-card__quote">"Desde que implementamos SIRAME en la Facultad de Ingeniería, el control de los equipos de laboratorio cambió por completo. Ya no perdemos tiempo buscando proyectores o laptops; todo está a un clic."</p>
+        <div class="testimonial-card__author">
+          <strong>Ing. Roberto Martínez</strong>
+          Coordinador de Laboratorios, UES
+        </div>
+      </article>
+      <!-- Testimonio 2 -->
+      <article class="testimonial-card">
+        <img src="Img/logo-utec.webp" alt="Logo UTEC" class="testimonial-card__logo" onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <p class="testimonial-card__quote">"La transición fue muy rápida. En UTEC valoramos que el sistema se adapte a nuestros 3 roles y que el historial de mantenimiento nos ayude con las auditorías internas."</p>
+        <div class="testimonial-card__author">
+          <strong>Lic. Claudia Ramírez</strong>
+          Directora de Administración, UTEC
+        </div>
+      </article>
+      <!-- Testimonio 3 -->
+      <article class="testimonial-card">
+        <img src="Img/logo-ministerio.webp" alt="Logo Ministerio de Educación" class="testimonial-card__logo" onerror="this.classList.add('img-fallback'); this.removeAttribute('src');">
+        <div class="testimonial-card__stars">★★★★☆</div>
+        <p class="testimonial-card__quote">"Implementamos SIRAME en varias oficinas del Ministerio. La capacidad de tener trazabilidad de cada traslado y las alertas de incidencias nos ha ahorrado recursos importantes."</p>
+        <div class="testimonial-card__author">
+          <strong>Arq. José Figueroa</strong>
+          Jefe de Infraestructura, MINED
+        </div>
+      </article>
+    </div>
+    <p class="modules__more" style="margin-top:40px;"><a href="resenas.html" class="btn btn--ghost">Ver todas las reseñas →</a></p>
+  </section>
+
+  <!-- CTA FINAL con imagen de fondo (reforzado) -->
+  <section class="cta-section">
+    <div class="cta-band cta-band--photo">
+      <img src="Img/cta-fondo.jpg" alt="" class="cta-band__bg" aria-hidden="true" onerror="this.style.display='none'">
+      <div class="cta-band__inner">
+        <h2>¿Listo para ordenar el inventario de tu institución?</h2>
+        <p>Solicitá acceso a SIRAME y empezá a registrar equipo, traslados y mantenimientos desde el primer día.</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="acceso.html" class="btn-star btn-star--large btn-star--onred">Solicitar acceso gratis</a>
+          <a href="precios.html" class="btn btn--ghost" style="color:#fff; border-color:rgba(255,255,255,0.4);">Ver planes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--footer">
+        <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+      </a>
+      <p>Sistema de Inventario, Registro y Administración de Materiales y Equipos (Inframen).</p>
+      
+      <div class="footer__social">
+        <a href="https://facebook.com/sirame" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://instagram.com/sirame" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://twitter.com/sirame" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+        <a href="https://linkedin.com/company/sirame" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://youtube.com/@sirame" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+      </div>
+
+      <div class="footer__contact">
+        <p>📞 <a href="tel:+50378682569">+503 7868 2569</a></p>
+        <p>📞 <a href="tel:+50373523444">+503 7352 3444</a></p>
+        <p>✉ <a href="mailto:contacto@sirame.com">contacto@sirame.com</a></p>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="modulos.html">Módulos</a>
+      <a href="roles.html">Roles</a>
+      <a href="sistema.html">El sistema</a>
+      <a href="precios.html">Precios</a>
+      <a href="ayuda.html">Ayuda</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="resenas.html">Reseñas</a>
+      <a href="acceso.html">Solicitar acceso</a>
+    </div>
+  </div>
+  <p class="footer__legal">© 2026 SIRAME. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/javascript.js"></script>
+</body>
+</html>

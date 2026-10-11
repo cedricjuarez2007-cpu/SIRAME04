@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roles y permisos — SIRAME</title>
+<link rel="icon" href="Img/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+      <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+    </a>
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="resenas.html" class="nav__link">Reseñas</a>
+      <a href="modulos.html" class="nav__link">Módulos</a>
+      <a href="roles.html" class="nav__link is-active">Roles</a>
+      <a href="sistema.html" class="nav__link">El sistema</a>
+      <a href="precios.html" class="nav__link">Precios</a>
+      <a href="ayuda.html" class="nav__link">Ayuda</a>
+      <a href="contacto.html" class="nav__link">Contacto</a>
+      <a href="acceso.html" class="btn-star btn-star--nav">Solicitar acceso</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Navegación móvil">
+    <a href="resenas.html">Reseñas</a>
+    <a href="modulos.html">Módulos</a>
+    <a href="roles.html">Roles</a>
+    <a href="sistema.html">El sistema</a>
+    <a href="precios.html">Precios</a>
+    <a href="ayuda.html">Ayuda</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acceso.html" class="nav__cta">Solicitar acceso</a>
+  </nav>
+</header>
+
+<main>
+
+  <div style="max-width: 1120px; margin: 0 auto; padding: 40px 32px 0; text-align: right;">
+    <a href="index.html" class="btn btn--ghost" style="padding: 8px 16px; font-size: 13px;">← Volver al Inicio</a>
+  </div>
+
+  <section class="access-hero">
+    <p class="hero__eyebrow">Acceso por rol</p>
+    <h1 class="section__title">Roles y permisos de SIRAME</h1>
+    <p class="access-hero__subtitle">Los permisos se asignan por rol, no por persona: así, cualquiera que entre al sistema con una cuenta de Coordinador tiene exactamente el mismo acceso que cualquier otro Coordinador.</p>
+  </section>
+
+  <!-- ROL: PROFESOR -->
+  <section class="role-detail">
+    <div class="role-detail__grid">
+      <div class="role-detail__photo"><img src="Img/rol-profesor.jpg" alt="Profesor consultando el estado de un equipo" onerror="this.parentElement.classList.add('img-fallback')"></div>
+      <div class="role-detail__copy">
+        <span class="role-card__tag">Profesor</span>
+        <h2>Consulta y reporte</h2>
+        <p>Pensado para quien usa el equipo día a día en el aula o laboratorio, sin necesitar acceso administrativo. Puede ver en qué estado está el equipo asignado a su espacio y avisar apenas detecta una falla.</p>
+        <ul class="role-detail__list">
+          <li><strong>Ver equipo:</strong> consulta ficha, estado y ubicación de los equipos de su(s) espacio(s) asignado(s).</li>
+          <li><strong>Reportar incidencia:</strong> abre un reporte con descripción y queda vinculado a su usuario para seguimiento.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROL: COORDINADOR -->
+  <section class="role-detail role-detail--reverse role-detail--tint">
+    <div class="role-detail__grid">
+      <div class="role-detail__copy">
+        <span class="role-card__tag">Coordinador</span>
+        <h2>Gestión operativa</h2>
+        <p>El rol intermedio: administra el día a día del equipo bajo su responsabilidad (un laboratorio, una coordinación, un edificio) sin necesitar pasar por Administración para cada movimiento.</p>
+        <ul class="role-detail__list">
+          <li><strong>Ver y actualizar equipo:</strong> edita estado, ubicación y datos de conservación.</li>
+          <li><strong>Registrar traslados:</strong> mueve equipo entre ubicaciones dejando motivo y fecha.</li>
+          <li><strong>Consultar incidencias:</strong> revisa los reportes hechos por profesores de su área.</li>
+        </ul>
+      </div>
+      <div class="role-detail__photo"><img src="Img/rol-coordinador.jpg" alt="Coordinador registrando un traslado de equipo" onerror="this.parentElement.classList.add('img-fallback')"></div>
+    </div>
+  </section>
+
+  <!-- ROL: ADMINISTRACIÓN -->
+  <section class="role-detail">
+    <div class="role-detail__grid">
+      <div class="role-detail__photo"><img src="Img/rol-administracion.jpg" alt="Administración gestionando el sistema completo" onerror="this.parentElement.classList.add('img-fallback')"></div>
+      <div class="role-detail__copy">
+        <span class="role-card__tag">Administración</span>
+        <h2>Control total del sistema</h2>
+        <p>Acceso completo: crea y elimina usuarios, autoriza bajas de equipo, revisa el historial completo de mantenimientos y configura los tipos de equipo y ubicaciones disponibles.</p>
+        <ul class="role-detail__list">
+          <li><strong>Gestión de usuarios:</strong> crea, edita y desactiva cuentas, asignando el rol correspondiente.</li>
+          <li><strong>Mantenimientos y bajas:</strong> registra mantenimientos y autoriza la baja formal de un equipo.</li>
+          <li><strong>Configuración general:</strong> administra tipos de equipo y ubicaciones del catálogo.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABLA COMPARATIVA -->
+  <section class="permissions">
+    <div class="section__head">
+      <p class="section__eyebrow">Comparativa</p>
+      <h2 class="section__title">Permisos por módulo</h2>
+      <p class="section__subtitle">Vista rápida de qué puede hacer cada rol en cada módulo del sistema.</p>
+    </div>
+    <div class="permissions__table-wrap">
+      <table class="permissions__table">
+        <thead>
+          <tr>
+            <th>Acción</th>
+            <th>Profesor</th>
+            <th>Coordinador</th>
+            <th>Administración</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Ver equipo</td><td>✔</td><td>✔</td><td>✔</td></tr>
+          <tr><td>Actualizar equipo</td><td>—</td><td>✔</td><td>✔</td></tr>
+          <tr><td>Reportar incidencia</td><td>✔</td><td>✔</td><td>✔</td></tr>
+          <tr><td>Registrar traslado</td><td>—</td><td>✔</td><td>✔</td></tr>
+          <tr><td>Aprobar traslado</td><td>—</td><td>—</td><td>✔</td></tr>
+          <tr><td>Registrar mantenimiento</td><td>—</td><td>—</td><td>✔</td></tr>
+          <tr><td>Aprobar baja</td><td>—</td><td>—</td><td>✔</td></tr>
+          <tr><td>Gestión de usuarios</td><td>—</td><td>—</td><td>✔</td></tr>
+          <tr><td>Reportes de auditoría</td><td>—</td><td>—</td><td>✔</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-band">
+      <div class="cta-band__inner">
+        <h2>¿Ya sabés qué rol necesitás?</h2>
+        <p>Solicitá tu acceso con el rol correspondiente y Administración lo habilita.</p>
+        <a href="acceso.html" class="btn-star btn-star--large btn-star--onred">Solicitar acceso</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--footer">
+        <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+      </a>
+      <p>Sistema de Inventario, Registro y Administración de Materiales y Equipos (Inframen).</p>
+      
+      <div class="footer__social">
+        <a href="https://facebook.com/sirame" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://instagram.com/sirame" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://twitter.com/sirame" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+        <a href="https://linkedin.com/company/sirame" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://youtube.com/@sirame" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+      </div>
+
+      <div class="footer__contact">
+        <p>📞 <a href="tel:+50378682569">+503 7868 2569</a></p>
+        <p>📞 <a href="tel:+50373523444">+503 7352 3444</a></p>
+        <p>✉ <a href="mailto:contacto@sirame.com">contacto@sirame.com</a></p>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="modulos.html">Módulos</a>
+      <a href="roles.html">Roles</a>
+      <a href="sistema.html">El sistema</a>
+      <a href="precios.html">Precios</a>
+      <a href="ayuda.html">Ayuda</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="resenas.html">Reseñas</a>
+      <a href="acceso.html">Solicitar acceso</a>
+    </div>
+  </div>
+  <p class="footer__legal">© 2026 SIRAME. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/javascript.js"></script>
+</body>
+</html>

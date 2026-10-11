@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precios — SIRAME</title>
+<link rel="icon" href="Img/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+      <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+    </a>
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="resenas.html" class="nav__link">Reseñas</a>
+      <a href="modulos.html" class="nav__link">Módulos</a>
+      <a href="roles.html" class="nav__link">Roles</a>
+      <a href="sistema.html" class="nav__link">El sistema</a>
+      <a href="precios.html" class="nav__link is-active">Precios</a>
+      <a href="ayuda.html" class="nav__link">Ayuda</a>
+      <a href="contacto.html" class="nav__link">Contacto</a>
+      <a href="acceso.html" class="btn-star btn-star--nav">Solicitar acceso</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Navegación móvil">
+    <a href="resenas.html">Reseñas</a>
+    <a href="modulos.html">Módulos</a>
+    <a href="roles.html">Roles</a>
+    <a href="sistema.html">El sistema</a>
+    <a href="precios.html">Precios</a>
+    <a href="ayuda.html">Ayuda</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acceso.html" class="nav__cta">Solicitar acceso</a>
+  </nav>
+</header>
+
+<main>
+
+  <div style="max-width: 1120px; margin: 0 auto; padding: 40px 32px 0; text-align: right;">
+    <a href="index.html" class="btn btn--ghost" style="padding: 8px 16px; font-size: 13px;">← Volver al Inicio</a>
+  </div>
+
+  <section class="access-hero">
+    <p class="hero__eyebrow">Precios</p>
+    <h1 class="section__title">Planes claros, sin letra pequeña</h1>
+    <p class="access-hero__subtitle">El precio depende de cuántos equipos vas a inventariar. Esto es lo que cuesta poner en marcha SIRAME en tu institución.</p>
+  </section>
+
+  <!-- TABLA: INVENTARIO POR CANTIDAD DE EQUIPOS -->
+  <section class="pricing-tiers">
+    <div class="section__head">
+      <p class="section__eyebrow">Inventario inicial</p>
+      <h2 class="section__title">Levantamiento y carga de inventario</h2>
+      <p class="section__subtitle">Incluye la visita, el conteo físico de cada equipo y la carga inicial de todas las fichas al sistema.</p>
+    </div>
+
+    <div class="pricing-tiers__table-wrap">
+      <table class="pricing-tiers__table">
+        <thead>
+          <tr>
+            <th>Cantidad de equipos</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Menos de 20 equipos</td><td>$150</td></tr>
+          <tr><td>De 20 a 49 equipos</td><td>$250</td></tr>
+          <tr><td>De 50 a 99 equipos</td><td>$400</td></tr>
+          <tr><td>De 100 a 199 equipos</td><td>$700</td></tr>
+          <tr><td>De 200 a 299 equipos</td><td>$1,000</td></tr>
+          <tr><td>De 300 a 399 equipos</td><td>$1,300</td></tr>
+          <tr><td>De 400 a 500 equipos</td><td>$1,600</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pricing-tiers__note">¿Tenés más de 500 equipos? Escribinos desde el formulario de <a href="acceso.html" class="inline-link">acceso</a> y te armamos un precio a medida.</p>
+  </section>
+
+  <!-- TARJETAS: OTROS SERVICIOS -->
+  <section class="modules">
+    <div class="section__head">
+      <p class="section__eyebrow">Otros servicios</p>
+      <h2 class="section__title">Lo que necesitás para operar SIRAME</h2>
+    </div>
+    <div class="price-cards">
+      <article class="price-card">
+        <span class="price-card__label">Identificación física</span>
+        <h3 class="price-card__title">Etiquetas QR / código de barras</h3>
+        <p class="price-card__amount">$5 <span>por equipo</span></p>
+        <p class="price-card__desc">Etiqueta física con código único por equipo, vinculada a su ficha en el sistema. Permite escanear y consultar el estado del equipo al instante.</p>
+      </article>
+
+      <article class="price-card price-card--highlight">
+        <span class="price-card__flag">Más elegido</span>
+        <span class="price-card__label">Pago único</span>
+        <h3 class="price-card__title">Sistema web SIRAME</h3>
+        <p class="price-card__amount">$1,500</p>
+        <p class="price-card__desc">Implementación completa del sistema web para tu institución: los 8 módulos, los 3 roles con sus permisos, y capacitación inicial para tu equipo.</p>
+      </article>
+
+      <article class="price-card">
+        <span class="price-card__label">Suscripción</span>
+        <h3 class="price-card__title">Mantenimiento y actualización</h3>
+        <p class="price-card__amount">$150 <span>/ mes</span></p>
+        <p class="price-card__desc">Soporte técnico, respaldo de la base de datos y actualizaciones del sistema mes a mes, para que SIRAME siga funcionando sin contratiempos.</p>
+      </article>
+    </div>
+
+    <div class="addon-cards">
+      <div class="addon-card">
+        <span class="addon-card__icon">🏷</span>
+        <h4>Etiquetas QR</h4>
+        <p>$5 por equipo</p>
+      </div>
+      <div class="addon-card">
+        <span class="addon-card__icon">🔍</span>
+        <h4>Revisión física anual</h4>
+        <p>Incluida en el mantenimiento mensual</p>
+      </div>
+      <div class="addon-card">
+        <span class="addon-card__icon">💻</span>
+        <h4>Sistema web SIRAME</h4>
+        <p>$1,500 pago único</p>
+      </div>
+      <div class="addon-card">
+        <span class="addon-card__icon">🛠</span>
+        <h4>Mantenimiento mensual</h4>
+        <p>$150 / mes</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-band">
+      <div class="cta-band__inner">
+        <h2>¿Listo para cotizar tu inventario?</h2>
+        <p>Contanos cuántos equipos tenés y te confirmamos el precio exacto para tu institución.</p>
+        <a href="acceso.html" class="btn-star btn-star--large btn-star--onred">Solicitar acceso</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--footer">
+        <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+      </a>
+      <p>Sistema de Inventario, Registro y Administración de Materiales y Equipos (Inframen).</p>
+      
+      <div class="footer__social">
+        <a href="https://facebook.com/sirame" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://instagram.com/sirame" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://twitter.com/sirame" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+        <a href="https://linkedin.com/company/sirame" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://youtube.com/@sirame" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+      </div>
+
+      <div class="footer__contact">
+        <p>📞 <a href="tel:+50378682569">+503 7868 2569</a></p>
+        <p>📞 <a href="tel:+50373523444">+503 7352 3444</a></p>
+        <p>✉ <a href="mailto:contacto@sirame.com">contacto@sirame.com</a></p>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="modulos.html">Módulos</a>
+      <a href="roles.html">Roles</a>
+      <a href="sistema.html">El sistema</a>
+      <a href="precios.html">Precios</a>
+      <a href="ayuda.html">Ayuda</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="resenas.html">Reseñas</a>
+      <a href="acceso.html">Solicitar acceso</a>
+    </div>
+  </div>
+  <p class="footer__legal">© 2026 SIRAME. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/javascript.js"></script>
+</body>
+</html>

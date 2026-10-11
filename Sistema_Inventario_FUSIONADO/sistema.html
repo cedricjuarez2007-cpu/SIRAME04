@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El sistema — SIRAME</title>
+<link rel="icon" href="Img/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+      <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+    </a>
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="resenas.html" class="nav__link">Reseñas</a>
+      <a href="modulos.html" class="nav__link">Módulos</a>
+      <a href="roles.html" class="nav__link">Roles</a>
+      <a href="sistema.html" class="nav__link is-active">El sistema</a>
+      <a href="precios.html" class="nav__link">Precios</a>
+      <a href="ayuda.html" class="nav__link">Ayuda</a>
+      <a href="contacto.html" class="nav__link">Contacto</a>
+      <a href="acceso.html" class="btn-star btn-star--nav">Solicitar acceso</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Navegación móvil">
+    <a href="resenas.html">Reseñas</a>
+    <a href="modulos.html">Módulos</a>
+    <a href="roles.html">Roles</a>
+    <a href="sistema.html">El sistema</a>
+    <a href="precios.html">Precios</a>
+    <a href="ayuda.html">Ayuda</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acceso.html" class="nav__cta">Solicitar acceso</a>
+  </nav>
+</header>
+
+<main>
+
+  <div style="max-width: 1120px; margin: 0 auto; padding: 40px 32px 0; text-align: right;">
+    <a href="index.html" class="btn btn--ghost" style="padding: 8px 16px; font-size: 13px;">← Volver al Inicio</a>
+  </div>
+
+  <section class="access-hero">
+    <p class="hero__eyebrow">El sistema</p>
+    <h1 class="section__title">Un registro, ocho módulos, cero hojas de cálculo sueltas</h1>
+    <p class="access-hero__subtitle">SIRAME reemplaza los inventarios en Excel repartidos entre distintas personas por un solo sistema centralizado, con historial completo y permisos por rol.</p>
+  </section>
+
+  <!-- ARQUITECTURA -->
+  <section class="system-architecture">
+    <div class="system-architecture__grid">
+      <div class="system-architecture__photo"><img src="Img/sistema-dashboard.jpg" alt="Panel del sistema SIRAME mostrando el inventario" onerror="this.parentElement.classList.add('img-fallback')"></div>
+      <div class="system-architecture__copy">
+        <p class="section__eyebrow">Arquitectura</p>
+        <h2>Ocho modelos conectados entre sí</h2>
+        <p>Equipo es el centro del sistema: se relaciona con TipoEquipo (qué es), Ubicación (dónde está) y Usuario (quién lo gestiona). A partir de ahí, Traslado, Mantenimiento, Baja e Incidencia registran todo lo que le pasa al equipo a lo largo del tiempo.</p>
+        <p>Esto significa que, al consultar un equipo, se puede ver de un vistazo su ubicación actual, su historial de traslados, sus mantenimientos y cualquier incidencia reportada — sin cruzar archivos distintos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARQUITECTURA EN CAPAS -->
+  <section>
+    <div class="section__head">
+      <p class="section__eyebrow">Arquitectura en capas</p>
+      <h2 class="section__title">Cómo está construido SIRAME</h2>
+      <p class="section__subtitle">Cuatro capas separadas, cada una con una responsabilidad clara.</p>
+    </div>
+    <div class="arch-layers">
+      <div class="arch-layer">
+        <span class="arch-layer__num">01</span>
+        <div><h3>Control de acceso seguro</h3><p>Inicio de sesión con usuario y contraseña; cada cuenta queda ligada a un rol (Profesor, Coordinador o Administración).</p></div>
+      </div>
+      <div class="arch-layer">
+        <span class="arch-layer__num">02</span>
+        <div><h3>Panel de control</h3><p>Vista general del inventario: equipos, estados, traslados recientes e incidencias abiertas, filtrada según el rol.</p></div>
+      </div>
+      <div class="arch-layer">
+        <span class="arch-layer__num">03</span>
+        <div><h3>Módulos operativos</h3><p>Los 8 módulos del sistema (Equipo, TipoEquipo, Ubicación, Usuario, Traslado, Mantenimiento, Baja, Incidencia) donde ocurre el trabajo diario.</p></div>
+      </div>
+      <div class="arch-layer">
+        <span class="arch-layer__num">04</span>
+        <div><h3>Base de datos</h3><p>Toda la información se guarda de forma centralizada, con respaldo periódico para que nada se pierda.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTADOS DEL EQUIPO -->
+  <section>
+    <div class="section__head">
+      <p class="section__eyebrow">Ciclo de vida</p>
+      <h2 class="section__title">Estados que puede tener un equipo</h2>
+    </div>
+    <div class="state-row">
+      <span class="state-pill state-pill--excelente"><span class="state-pill__dot"></span>Excelente</span>
+      <span class="state-pill state-pill--bueno"><span class="state-pill__dot"></span>Bueno</span>
+      <span class="state-pill state-pill--danado"><span class="state-pill__dot"></span>Dañado</span>
+      <span class="state-pill state-pill--mantenimiento"><span class="state-pill__dot"></span>En Mantenimiento</span>
+      <span class="state-pill state-pill--baja"><span class="state-pill__dot"></span>Dado de Baja</span>
+    </div>
+  </section>
+
+  <!-- FLUJO DE TRABAJO DETALLADO -->
+  <section class="steps">
+    <div class="section__head">
+      <p class="section__eyebrow">Flujo de trabajo</p>
+      <h2 class="section__title">Del alta al historial completo</h2>
+      <p class="section__subtitle">Así se mueve la información dentro del sistema, paso a paso.</p>
+    </div>
+    <div class="steps__grid steps__grid--four">
+      <article class="step-item">
+        <span class="step-item__number">01</span>
+        <h3>Alta de equipo</h3>
+        <p>Administración registra el equipo con tipo, número de serie y ubicación inicial.</p>
+      </article>
+      <article class="step-item">
+        <span class="step-item__number">02</span>
+        <h3>Asignación y uso</h3>
+        <p>El equipo queda visible para el Coordinador y los Profesores de esa ubicación.</p>
+      </article>
+      <article class="step-item">
+        <span class="step-item__number">03</span>
+        <h3>Traslados y reportes</h3>
+        <p>Coordinadores mueven equipo; Profesores reportan fallas cuando ocurren.</p>
+      </article>
+      <article class="step-item">
+        <span class="step-item__number">04</span>
+        <h3>Mantenimiento o baja</h3>
+        <p>Administración da mantenimiento o, si ya no es viable, autoriza la baja formal.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="modules">
+    <div class="section__head">
+      <p class="section__eyebrow">Beneficios</p>
+      <h2 class="section__title">Por qué un sistema centralizado</h2>
+    </div>
+    <div class="modules__grid modules__grid--three">
+      <article class="module-card"><span class="module-card__icon">📊</span><h3>Un solo registro</h3><p>Se acabó buscar el equipo en tres archivos de Excel distintos.</p></article>
+      <article class="module-card"><span class="module-card__icon">🔐</span><h3>Permisos claros</h3><p>Cada rol ve y edita exactamente lo que le corresponde.</p></article>
+      <article class="module-card"><span class="module-card__icon">🕓</span><h3>Historial completo</h3><p>Traslados, mantenimientos y bajas quedan documentados con fecha y responsable.</p></article>
+    </div>
+  </section>
+
+  <!-- STATS reutilizadas -->
+  <section class="stats">
+    <div class="stats__inner">
+      <div class="stat"><p class="stat__number" data-count="8">0</p><p class="stat__label">Modelos de datos conectados</p></div>
+      <div class="stat"><p class="stat__number" data-count="3">0</p><p class="stat__label">Roles con permisos propios</p></div>
+      <div class="stat"><p class="stat__number" data-count="1">0</p><p class="stat__label">Sistema para toda la institución</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-band">
+      <div class="cta-band__inner">
+        <h2>¿Listo para dejar atrás las hojas de cálculo sueltas?</h2>
+        <p>Solicitá acceso y empezá a centralizar el inventario de tu institución hoy mismo.</p>
+        <a href="acceso.html" class="btn-star btn-star--large btn-star--onred">Solicitar acceso</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--footer">
+        <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+      </a>
+      <p>Sistema de Inventario, Registro y Administración de Materiales y Equipos (Inframen).</p>
+      
+      <div class="footer__social">
+        <a href="https://facebook.com/sirame" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://instagram.com/sirame" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://twitter.com/sirame" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+        <a href="https://linkedin.com/company/sirame" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://youtube.com/@sirame" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+      </div>
+
+      <div class="footer__contact">
+        <p>📞 <a href="tel:+50378682569">+503 7868 2569</a></p>
+        <p>📞 <a href="tel:+50373523444">+503 7352 3444</a></p>
+        <p>✉ <a href="mailto:contacto@sirame.com">contacto@sirame.com</a></p>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="modulos.html">Módulos</a>
+      <a href="roles.html">Roles</a>
+      <a href="sistema.html">El sistema</a>
+      <a href="precios.html">Precios</a>
+      <a href="ayuda.html">Ayuda</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="resenas.html">Reseñas</a>
+      <a href="acceso.html">Solicitar acceso</a>
+    </div>
+  </div>
+  <p class="footer__legal">© 2026 SIRAME. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/javascript.js"></script>
+</body>
+</html>

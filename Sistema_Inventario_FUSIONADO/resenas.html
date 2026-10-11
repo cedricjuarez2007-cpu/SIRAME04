@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reseñas de usuarios — SIRAME</title>
+<link rel="icon" href="Img/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+      <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+    </a>
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="modulos.html" class="nav__link">Módulos</a>
+      <a href="roles.html" class="nav__link">Roles</a>
+      <a href="sistema.html" class="nav__link">El sistema</a>
+      <a href="precios.html" class="nav__link">Precios</a>
+      <a href="ayuda.html" class="nav__link">Ayuda</a>
+      <a href="contacto.html" class="nav__link">Contacto</a>
+      <a href="resenas.html" class="nav__link is-active">Reseñas</a>
+      <a href="acceso.html" class="btn-star btn-star--nav">Solicitar acceso</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Navegación móvil">
+    <a href="modulos.html">Módulos</a>
+    <a href="roles.html">Roles</a>
+    <a href="sistema.html">El sistema</a>
+    <a href="precios.html">Precios</a>
+    <a href="ayuda.html">Ayuda</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="resenas.html">Reseñas</a>
+    <a href="acceso.html" class="nav__cta">Solicitar acceso</a>
+  </nav>
+</header>
+
+<main>
+
+  <div style="max-width: 1120px; margin: 0 auto; padding: 40px 32px 0; text-align: right;">
+    <a href="index.html" class="btn btn--ghost" style="padding: 8px 16px; font-size: 13px;">← Volver al Inicio</a>
+  </div>
+
+  <section class="access-hero">
+    <p class="hero__eyebrow">Opiniones reales</p>
+    <h1 class="section__title">Lo que dicen nuestros usuarios</h1>
+    <p class="access-hero__subtitle">Reseñas verificadas de instituciones que ya usan SIRAME en El Salvador. Tu opinión también nos ayuda a mejorar.</p>
+  </section>
+
+  <!-- RESUMEN DE CALIFICACIONES (estilo Play Store) -->
+  <section>
+    <div class="reviews-summary">
+      <div class="reviews-summary__score">
+        <p class="reviews-summary__number">4.6</p>
+        <div class="reviews-summary__stars">★★★★★</div>
+        <p class="reviews-summary__total">Basado en 128 reseñas</p>
+      </div>
+      <div class="reviews-summary__bars">
+        <div class="review-bar">
+          <span>5 ★</span>
+          <div class="review-bar__track"><div class="review-bar__fill review-bar__fill--high" style="width: 78%;"></div></div>
+          <span>78%</span>
+        </div>
+        <div class="review-bar">
+          <span>4 ★</span>
+          <div class="review-bar__track"><div class="review-bar__fill review-bar__fill--high" style="width: 15%;"></div></div>
+          <span>15%</span>
+        </div>
+        <div class="review-bar">
+          <span>3 ★</span>
+          <div class="review-bar__track"><div class="review-bar__fill review-bar__fill--mid" style="width: 4%;"></div></div>
+          <span>4%</span>
+        </div>
+        <div class="review-bar">
+          <span>2 ★</span>
+          <div class="review-bar__track"><div class="review-bar__fill review-bar__fill--low" style="width: 2%;"></div></div>
+          <span>2%</span>
+        </div>
+        <div class="review-bar">
+          <span>1 ★</span>
+          <div class="review-bar__track"><div class="review-bar__fill review-bar__fill--low" style="width: 1%;"></div></div>
+          <span>1%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTA DE RESEÑAS -->
+  <section style="padding-top:0;">
+    <div class="reviews-list" id="reviewsList">
+
+      <!-- Reseña 5 estrellas -->
+      <article class="review-item">
+        <div class="review-item__avatar">M</div>
+        <div class="review-item__body">
+          <div class="review-item__header">
+            <p class="review-item__name">María López</p>
+            <span class="review-item__date">12 mar 2026</span>
+          </div>
+          <div class="review-item__stars">★★★★★</div>
+          <p class="review-item__text">Excelente sistema. Llevamos 6 meses usándolo en el colegio y ya no se nos pierde ningún proyector. La función de traslados es súper útil para saber quién tiene cada cosa.</p>
+        </div>
+      </article>
+
+      <!-- Reseña 5 estrellas -->
+      <article class="review-item">
+        <div class="review-item__avatar">C</div>
+        <div class="review-item__body">
+          <div class="review-item__header">
+            <p class="review-item__name">Carlos Hernández</p>
+            <span class="review-item__date">28 feb 2026</span>
+          </div>
+          <div class="review-item__stars">★★★★★</div>
+          <p class="review-item__text">El soporte técnico es muy rápido. Tuvimos una duda con los permisos de los coordinadores y nos la resolvieron el mismo día. Recomendado.</p>
+        </div>
+      </article>
+
+      <!-- Reseña 4 estrellas -->
+      <article class="review-item">
+        <div class="review-item__avatar">A</div>
+        <div class="review-item__body">
+          <div class="review-item__header">
+            <p class="review-item__name">Ana Guzmán</p>
+            <span class="review-item__date">15 feb 2026</span>
+          </div>
+          <div class="review-item__stars">★★★★<span class="empty">★</span></div>
+          <p class="review-item__text">Muy buen sistema en general. Le pondría 5 estrellas si la app móvil tuviera modo offline, porque a veces no tenemos buena señal en las bodegas. Por lo demás, excelente.</p>
+        </div>
+      </article>
+
+      <!-- Reseña 3 estrellas -->
+      <article class="review-item">
+        <div class="review-item__avatar">J</div>
+        <div class="review-item__body">
+          <div class="review-item__header">
+            <p class="review-item__name">Jorge Pérez</p>
+            <span class="review-item__date">2 feb 2026</span>
+          </div>
+          <div class="review-item__stars">★★★<span class="empty">★</span><span class="empty">★</span></div>
+          <p class="review-item__text">El sistema funciona bien, pero la carga inicial de los 300 equipos fue más lenta de lo que esperábamos. El equipo de SIRAME nos ayudó, pero tomó su tiempo.</p>
+        </div>
+      </article>
+
+      <!-- Reseña 2 estrellas -->
+      <article class="review-item">
+        <div class="review-item__avatar">L</div>
+        <div class="review-item__body">
+          <div class="review-item__header">
+            <p class="review-item__name">Luisa Martínez</p>
+            <span class="review-item__date">20 ene 2026</span>
+          </div>
+          <div class="review-item__stars">★★<span class="empty">★</span><span class="empty">★</span><span class="empty">★</span></div>
+          <p class="review-item__text">Nos costó adaptarnos al principio porque veníamos de Excel. El sistema es completo, pero la curva de aprendizaje fue más alta de lo que pensábamos para el personal administrativo.</p>
+        </div>
+      </article>
+
+      <!-- Reseña 1 estrella -->
+      <article class="review-item">
+        <div class="review-item__avatar">R</div>
+        <div class="review-item__body">
+          <div class="review-item__header">
+            <p class="review-item__name">Ricardo Sánchez</p>
+            <span class="review-item__date">10 ene 2026</span>
+          </div>
+          <div class="review-item__stars">★<span class="empty">★</span><span class="empty">★</span><span class="empty">★</span><span class="empty">★</span></div>
+          <p class="review-item__text">Tuvimos problemas con la migración de nuestros datos antiguos y el proceso se retrasó varias semanas. Espero que mejoren esa parte para futuros clientes.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FORMULARIO PARA DEJAR RESEÑA -->
+  <section style="padding-top:0;">
+    <div class="review-form-wrap">
+      <h3>Dejanos tu opinión</h3>
+      <p>Tu reseña nos ayuda a mejorar y a que otras instituciones conozcan SIRAME.</p>
+      <form id="reviewForm" novalidate>
+        <div class="form-field">
+          <label>Tu calificación</label>
+          <div class="star-rating-input" data-rating="0">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="reviewName">Tu nombre</label>
+            <input type="text" id="reviewName" name="nombre" placeholder="Ej. María Fernández" required>
+          </div>
+          <div class="form-field">
+            <label for="reviewInstitution">Institución <span class="form-field__optional">(opcional)</span></label>
+            <input type="text" id="reviewInstitution" name="institucion" placeholder="Ej. Colegio San Francisco">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="reviewText">Tu opinión</label>
+          <textarea id="reviewText" name="mensaje" rows="4" placeholder="Contanos tu experiencia con SIRAME..." required></textarea>
+        </div>
+        <button type="submit" class="btn-star btn-star--large">Publicar reseña</button>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-band">
+      <div class="cta-band__inner">
+        <h2>¿Querés ser el próximo en opinar?</h2>
+        <p>Solicitá acceso a SIRAME y empezá a gestionar tu inventario hoy mismo.</p>
+        <a href="acceso.html" class="btn-star btn-star--large btn-star--onred">Solicitar acceso gratis</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--footer">
+        <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+      </a>
+      <p>Sistema de Inventario, Registro y Administración de Materiales y Equipos (Inframen).</p>
+      
+      <div class="footer__social">
+        <a href="https://facebook.com/sirame" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://instagram.com/sirame" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://twitter.com/sirame" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+        <a href="https://linkedin.com/company/sirame" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://youtube.com/@sirame" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+      </div>
+
+      <div class="footer__contact">
+        <p>📞 <a href="tel:+50378682569">+503 7868 2569</a></p>
+        <p>📞 <a href="tel:+50373523444">+503 7352 3444</a></p>
+        <p>✉ <a href="mailto:contacto@sirame.com">contacto@sirame.com</a></p>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="modulos.html">Módulos</a>
+      <a href="roles.html">Roles</a>
+      <a href="sistema.html">El sistema</a>
+      <a href="precios.html">Precios</a>
+      <a href="ayuda.html">Ayuda</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="resenas.html">Reseñas</a>
+      <a href="acceso.html">Solicitar acceso</a>
+    </div>
+  </div>
+  <p class="footer__legal">© 2026 SIRAME. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo Mantenimiento — SIRAME</title>
+<link rel="icon" href="Img/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+      <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+    </a>
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="resenas.html" class="nav__link">Reseñas</a>
+      <a href="modulos.html" class="nav__link">Módulos</a>
+      <a href="roles.html" class="nav__link">Roles</a>
+      <a href="sistema.html" class="nav__link">El sistema</a>
+      <a href="precios.html" class="nav__link">Precios</a>
+      <a href="ayuda.html" class="nav__link">Ayuda</a>
+      <a href="contacto.html" class="nav__link">Contacto</a>
+      <a href="acceso.html" class="btn-star btn-star--nav">Solicitar acceso</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Navegación móvil">
+    <a href="resenas.html">Reseñas</a>
+    <a href="modulos.html">Módulos</a>
+    <a href="roles.html">Roles</a>
+    <a href="sistema.html">El sistema</a>
+    <a href="precios.html">Precios</a>
+    <a href="ayuda.html">Ayuda</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="acceso.html" class="nav__cta">Solicitar acceso</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="breadcrumb-wrap">
+    <a href="index.html">Inicio</a><span>/</span>
+    <a href="modulos.html">Módulos</a><span>/</span>
+    <span class="current">Mantenimiento</span>
+  </div>
+
+  <div style="max-width: 1120px; margin: 0 auto; padding: 20px 24px 0; text-align: right;">
+    <a href="index.html" class="btn btn--ghost" style="padding: 8px 16px; font-size: 13px;">← Volver al Inicio</a>
+  </div>
+
+  <section class="module-hero">
+    <span class="module-hero__icon">🛠</span>
+    <h1 class="section__title">Mantenimiento</h1>
+    <p class="page-hero__subtitle">Extiende la vida útil de los equipos y reduce los costos por reemplazos prematuros, con un historial preventivo y correctivo por cada bien.</p>
+  </section>
+
+  <section class="page-content">
+    <div class="module-photo-wide img-fallback">
+      <img src="Img/modulo-mantenimiento.jpg" alt="Mantenimiento de una computadora" onerror="this.parentElement.classList.add('img-fallback')">
+    </div>
+
+    <div class="row g-4">
+      <div>
+        <div class="feature-card">
+          <h3>Qué registra</h3>
+          <ul class="feature-card__list">
+            <li>Fecha de ingreso y salida programada</li>
+            <li>Tipo de reparación realizada</li>
+            <li>Técnico responsable</li>
+            <li>Diagnóstico y costo</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="feature-card">
+          <h3>Cómo funciona</h3>
+          <ul class="feature-card__list">
+            <li>Al ingresar a revisión, el estado pasa a "En Mantenimiento"</li>
+            <li>El equipo no puede asignarse por error mientras tanto</li>
+            <li>Calendario preventivo para laboratorios y áreas administrativas</li>
+            <li>Historial completo para decidir reparar o reemplazar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="who-can">
+      <h3>¿Quién puede hacer qué?</h3>
+      <div class="who-grid">
+        <div class="who-item"><span class="who-badge who-badge--1">P</span>Profesor: reporta fallas desde Incidencia</div>
+        <div class="who-item"><span class="who-badge who-badge--2">C</span>Coordinador: registra y da seguimiento</div>
+        <div class="who-item"><span class="who-badge who-badge--3">A</span>Administración: autoriza y revisa costos</div>
+      </div>
+    </div>
+
+    <p style="text-align:center;margin-top:36px">
+      <a href="modulos.html" class="btn btn--ghost">← Volver a todos los módulos</a>
+    </p>
+  </section>
+
+  <section>
+    <div class="cta-band">
+      <div class="cta-band__inner">
+        <h2>¿Querés ver el módulo Mantenimiento en acción?</h2>
+        <p>Solicitá acceso y recorré el flujo según tu rol.</p>
+        <a href="acceso.html" class="btn-star btn-star--large btn-star--onred">Solicitar acceso</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--footer">
+        <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+      </a>
+      <p>Sistema de Inventario, Registro y Administración de Materiales y Equipos (Inframen).</p>
+      
+      <div class="footer__social">
+        <a href="https://facebook.com/sirame" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://instagram.com/sirame" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://twitter.com/sirame" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+        <a href="https://linkedin.com/company/sirame" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://youtube.com/@sirame" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+      </div>
+
+      <div class="footer__contact">
+        <p>📞 <a href="tel:+50378682569">+503 7868 2569</a></p>
+        <p>📞 <a href="tel:+50373523444">+503 7352 3444</a></p>
+        <p>✉ <a href="mailto:contacto@sirame.com">contacto@sirame.com</a></p>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="modulos.html">Módulos</a>
+      <a href="roles.html">Roles</a>
+      <a href="sistema.html">El sistema</a>
+      <a href="precios.html">Precios</a>
+      <a href="ayuda.html">Ayuda</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="resenas.html">Reseñas</a>
+      <a href="acceso.html">Solicitar acceso</a>
+    </div>
+  </div>
+  <p class="footer__legal">© 2026 SIRAME. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/javascript.js"></script>
+</body>
+</html>

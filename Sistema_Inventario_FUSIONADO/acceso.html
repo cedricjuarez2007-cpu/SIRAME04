@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitar acceso — SIRAME</title>
+<link rel="icon" href="Img/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+      <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+    </a>
+    <nav class="nav__links" aria-label="Navegación">
+      <a href="resenas.html" class="nav__link">Reseñas</a>
+      <a href="modulos.html" class="nav__link">Módulos</a>
+      <a href="roles.html" class="nav__link">Roles</a>
+      <a href="precios.html" class="nav__link">Precios</a>
+      <a href="ayuda.html" class="nav__link">Ayuda</a>
+      <a href="contacto.html" class="nav__link">Contacto</a>
+      <a href="index.html" class="nav__link">← Volver al inicio</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Navegación móvil">
+    <a href="resenas.html">Reseñas</a>
+    <a href="modulos.html">Módulos</a>
+    <a href="roles.html">Roles</a>
+    <a href="sistema.html">El sistema</a>
+    <a href="precios.html">Precios</a>
+    <a href="ayuda.html">Ayuda</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="index.html">Volver al inicio</a>
+  </nav>
+</header>
+
+<main>
+
+  <div style="max-width: 1120px; margin: 0 auto; padding: 40px 32px 0; text-align: right;">
+    <a href="index.html" class="btn btn--ghost" style="padding: 8px 16px; font-size: 13px;">← Volver al Inicio</a>
+  </div>
+
+  <section class="access-split">
+    <div class="access-split__photo">
+      <img src="Img/acceso-ilustracion.jpg" alt="Persona completando el formulario de acceso a SIRAME" onerror="this.parentElement.classList.add('img-fallback')">
+    </div>
+
+    <div class="access-split__form">
+      <p class="hero__eyebrow">Acceso al sistema</p>
+      <h1 class="section__title">Solicitar acceso a SIRAME</h1>
+      <p class="access-hero__subtitle" style="margin:14px 0 32px;">Completá el formulario con tus datos institucionales. Administración revisa cada solicitud y habilita tu usuario con el rol que corresponda.</p>
+
+      <div class="access-card" id="accessCard">
+        <form id="accessForm" novalidate>
+
+          <div class="form-field">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. María Fernández" required>
+          </div>
+
+          <div class="form-field">
+            <label for="correo">Correo institucional</label>
+            <input type="email" id="correo" name="correo" placeholder="nombre@institucion.edu" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="institucion">Institución / Dependencia</label>
+              <input type="text" id="institucion" name="institucion" placeholder="Ej. Coordinación de Laboratorios" required>
+            </div>
+            <div class="form-field">
+              <label for="rol">Rol solicitado</label>
+              <select id="rol" name="rol" required>
+                <option value="" disabled selected>Seleccioná un rol</option>
+                <option value="Profesor">Profesor</option>
+                <option value="Coordinador">Coordinador</option>
+                <option value="Administración">Administración</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="carnet">Número de empleado o carné <span class="form-field__optional">(opcional)</span></label>
+            <input type="text" id="carnet" name="carnet" placeholder="Ej. EMP-0451">
+          </div>
+
+          <div class="form-field">
+            <label for="motivo">Justificación / Motivo de acceso</label>
+            <textarea id="motivo" name="motivo" rows="4" placeholder="Contanos para qué necesitás acceso al sistema y qué equipo o ubicación gestionás." required></textarea>
+          </div>
+
+          <p class="form-note">Administración se comunicará al correo institucional indicado para confirmar la creación de tu usuario.</p>
+
+          <button type="submit" class="btn-star btn-star--large">Enviar solicitud</button>
+        </form>
+      </div>
+
+      <div class="access-confirm is-hidden" id="accessConfirm">
+        <span class="access-confirm__icon">✓</span>
+        <h2 id="accessConfirmTitle">Solicitud enviada</h2>
+        <p id="accessConfirmText">Administración revisará tu solicitud y te contactará para habilitar tu acceso.</p>
+        <a href="index.html" class="btn btn--ghost">Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--footer">
+        <img src="Img/logo.jpeg" alt="Logo SIRAME" class="logo__img" onerror="this.style.display='none'">
+      </a>
+      <p>Sistema de Inventario, Registro y Administración de Materiales y Equipos (Inframen).</p>
+      
+      <div class="footer__social">
+        <a href="https://facebook.com/sirame" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://instagram.com/sirame" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://twitter.com/sirame" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+        <a href="https://linkedin.com/company/sirame" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://youtube.com/@sirame" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+      </div>
+
+      <div class="footer__contact">
+        <p>📞 <a href="tel:+50378682569">+503 7868 2569</a></p>
+        <p>📞 <a href="tel:+50373523444">+503 7352 3444</a></p>
+        <p>✉ <a href="mailto:contacto@sirame.com">contacto@sirame.com</a></p>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="modulos.html">Módulos</a>
+      <a href="roles.html">Roles</a>
+      <a href="sistema.html">El sistema</a>
+      <a href="precios.html">Precios</a>
+      <a href="ayuda.html">Ayuda</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="resenas.html">Reseñas</a>
+      <a href="acceso.html">Solicitar acceso</a>
+    </div>
+  </div>
+  <p class="footer__legal">© 2026 SIRAME. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/javascript.js"></script>
+</body>
+</html>
